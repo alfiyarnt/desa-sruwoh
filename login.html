@@ -6,6 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="Chrome">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <script type="text/javascript">
+        function validateForm() {
+            var username = document.forms["loginForm"]["user"].value;
+            var password = document.forms["loginForm"]["user"].value;
+
+            if (username == "" || password == "") {
+                alert("Username/Password tidak boleh kosong.");
+                return false;
+            } 
+            if (username == "user" && password == "user") {
+                window.location.href = "user.html";
+                return false;
+            } else {
+                alert("Akun tidak ditemukan.");
+                return false;
+            }
+       }
+       </script>
 </head>
 
 <style>
@@ -45,7 +63,7 @@ input{
     border: 0;
     width: 370px;
 }
-button{
+.submit{
     background-color: rgb(42, 99, 25);
     border-radius: 10px;
     margin-top: 10px;
@@ -55,7 +73,7 @@ button{
     border: 0;
     width: 370px;
 }
-button:hover{
+.submit:hover{
     background-color: rgb(60, 78, 68);
     color: rgb(162, 255, 100);
     cursor: pointer;
@@ -82,15 +100,15 @@ p a:hover{
         Login Page
     </div>
     <div id="inputan">
-     <form action="" method="post">
+     <form name="loginForm" onsubmit="return validateForm()">
         <div>
-            <input type="text" name="username" class="input" placeholder="Enter Username"/>
+            <input type="text" name="user" class="input" placeholder="Enter Username"/>
             </div>
         <div>
             <input type="password" name="password" class="input" placeholder="Enter Password"/>
             </div>
         <div>
-            <a href="user.html"><button type="button">Login</button></a>
+            <input type="submit" name="login" value="Login" class="submit">
         </div>
         <div>
             <p>Don't Have an Account? <a href="registrasi.html">Sign Up</a></p>
