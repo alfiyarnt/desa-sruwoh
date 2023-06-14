@@ -5,7 +5,24 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Sign Up</title>
-   <link href="regist_style.css" rel="stylesheet" type="text/css">
+   <script type="text/javascript">
+    function validateForm() {
+        var name = document.forms["registrationForm"]["name"].value;
+        var email = document.forms["registrationForm"]["email"].value;
+        var password = document.forms["registrationForm"]["password"].value;
+        var confirmPassword = document.forms["registrationForm"]["confirmPassword"].value;
+
+        if (name !== "Alfiya" || email !== "alfiya@email.com" ||
+            password !== "admin" || confirmPassword !== "admin") {
+            alert("Kolom registrasi tidak sesuai persyaratan.");
+            return false;
+        } else {
+            alert("Registrasi berhasil!");
+            window.location.href = "login.html";
+            return false;
+        }
+   }
+   </script>
 </head>
 
 <style>
@@ -47,7 +64,7 @@ input{
     border: 1px;
     width: 370px;
 }
-button{
+.submit{
     background-color: rgb(128, 99, 61);
     border-radius: 10px;
     margin-top: 10px;
@@ -57,7 +74,7 @@ button{
     border: 0;
     width: 370px;
 }
-button:hover{
+.submit:hover{
     background-color:dimgrey;
     color: rgb(97, 236, 63);
     cursor: pointer;
@@ -85,7 +102,7 @@ p a:hover{
         Sign Up Page
    </div>
     <div id="inputan">
-      <form action="" method="post">
+      <form name="registrationForm" onsubmit="return validateForm()">
          <div>
             <input type="text" name="name" required placeholder="Enter Full Name"><br>
          </div>
@@ -96,10 +113,10 @@ p a:hover{
             <input type="password" name="password" required placeholder="Enter Password"><br>
          </div>
          <div>
-            <input type="password" name="cpassword" required placeholder="Re-Enter Password"><br>
+            <input type="password" name="confirmPassword" required placeholder="Re-Enter Password"><br>
          </div>
          <div>
-            <a href="login.html"><button type="button">Register Now</button></a>
+            <input type="submit" name="submit" value="Register Now" class="submit">
         </div>
          <div>
             <p>Have an Account? <a href="login.html">Sign In</a></p>
