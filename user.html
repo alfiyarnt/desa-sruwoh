@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=#, initial-scale=1.0">
+    <title>Sistem Informasi Penggunaan Lahan Desa Sruwoh</title>
+    <link href="user.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="images/logo kab.png" class="logo">
+            <text>WELCOME USER !</text>
+        </div>
+
+        <div class="row">
+            <div class="col"></div>
+                <h1>SRUWOH<span>LAND</span></h1>
+                <p>Portal Informasi Penggunaan Lahan Terkini Desa Sruwoh, Kecamatan Ngombol<p>
+            </div>
+            <div class="col"></div>
+                <div class="card card1">
+                    <h5><a href= "https://id.wikipedia.org/wiki/Sruwoh,_Ngombol,_Purworejo">TENTANG DESA SRUWOH</a></h5>
+                    <p></p>
+                </div>
+                <div class="card card2">
+                    <h5><a href= "https://penggunaanlahan-sruwoh.gis.co.id">PENGGUNAAN LAHAN DESA SRUWOH</a></h5>
+                    <p></p>
+                </div>
+                <div class="card card3">
+                    <h5><a href= "https://simpanganpl-sruwoh.gis.co.id">SIMPANGAN POLA RUANG</a></h5>
+                    <p></p>
+                </div>
+                <div class="card card4">
+                    <h5><a href= "https://polaruangrtrw-desasruwoh.gis.co.id">POLA RUANG RTRW DESA SRUWOH</a></h5>
+                    <p></p>
+                </div>
+</body>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.137),rgba(0,0,0,0.7)), url(https://media.giphy.com/media/xT1R9ROUvcJAVUezx6/giphy.gif);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+.navbar text {    
+    color: #fff;
+    font-size: 30px;
+    line-height: 20px;
+    margin-left: 22px;
+}
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 50px;
+    cursor: pointer;
+}
+.menu-icon{
+    width: 60px;
+    cursor: pointer;
+    margin-left: px;
+
+}
+.row{
+    display: inline;
+    height: 88%;
+    align-items: center;
+}
+.col{
+    flex-basis: 60%;
+}
+h1{
+    color: #fff;
+    font-size: 80px;
+    text-align: center;
+}
+h1 span{
+    color: rgba(3, 99, 0, 0.932);
+    text-align: center;
+}
+p{
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+
+}
+.card{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 50px 40px;
+    background-image: url(images/rice-fields-ubud.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+.card1{
+    background-image: url(Images/rice-fields-ubud.jpg);
+}
+.card2{
+    background-image: url(Images/shallow-focus-shot-japanese-elderly-people-working-field.jpg);
+}
+.card3{
+    background-image: url(images/rice-fields-bali.jpg);
+}
+.card4{
+    background-image: url(images/green-landscape-blue-sky-white-clouds.jpg);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+h5{
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+}
+.card p{
+    text-shadow: 0 0 15px #ffffff;
+    font-size: 10px;
+}
+</style>
+</html>
